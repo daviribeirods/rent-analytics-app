@@ -1,4 +1,5 @@
 # Ignore python venv
 /venv
 
-# 
+# Ignore _pycache_
+*.pyc
