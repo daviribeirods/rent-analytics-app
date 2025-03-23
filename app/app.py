@@ -1,12 +1,23 @@
 import dash
 from dash import Dash, html, dcc
+import dash_bootstrap_components as dbc
 
-app = Dash(__name__, use_pages=True)
+app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-app.layout = html.Div(
+app.layout = dbc.Container(
     [
         # main app framework
-        html.Div("Brasilia Rent Analytics App", style={'fontSize':50, 'textAlign':'center'}),
+        dbc.Row(
+            [
+                html.Div(
+                    children = ['Brasilia Rent Analytics App'],
+                    style = {
+                        'fontSize': 50,
+                        'textAlign': 'center'
+                    }
+                )
+            ]
+        ),
         html.Div([
             dcc.Link(page['name']+"  |  ", href=page['path'])
             for page in dash.page_registry.values()
