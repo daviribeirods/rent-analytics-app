@@ -3,3 +3,6 @@
 
 # Ignore _pycache_
 *.pyc
+
+# Ignore assets
+/app/assets
