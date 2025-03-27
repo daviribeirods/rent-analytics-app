@@ -136,15 +136,17 @@ layout = dbc.Container(
                     ],
                     className = "mx-2 "
                 ),
-                dbc.Col(
+            ],
+            className = 'mx-2 mt-4'
+        ),
+        dbc.Row(
+            dbc.Col(
                     [
                         card
                     ],
                     className = "mx-5"
                 )
-            ],
-            className = 'mx-2 mt-4'
         )
     ],
-    fluid=True    
+    fluid=False    
 )

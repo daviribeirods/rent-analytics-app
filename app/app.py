@@ -38,10 +38,10 @@ app.layout = dbc.Container(
                 dbc.Col(
                     children = [
                         dbc.Button('Home', color='primary', className='mt-4 mx-1', href='/'),
-                        dbc.Button('Analytics', color='primary', className='mt-4 mx-1', href='/analytics'),
+                        # dbc.Button('Analytics', color='primary', className='mt-4 mx-1', href='/analytics'),
                         dbc.Button('About', color='primary', className='mt-4 mx-1', href='/about'),
                     ],
-                    width=3
+                    width=2
                 )
             ],
             className = 'mt-4 mx-3' 
