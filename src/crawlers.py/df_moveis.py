@@ -72,17 +72,43 @@ def run_df_moveis():
             main_page.goto(url=current_url)
 
             # Extract data from each url
-            
             # Street / name property
             street_selector = 'h1.mb-0.font-weight-600.fs-1-5'
             street_locator = main_page.locator(street_selector)
-            street = street_locator.text_content()
+            property_street = street_locator.text_content()
             
-            # Rent price
-            rent_price_selector = 'small.display-5.text-warning'
-            rent_price_locator = main_page.locator(rent_price_selector)
-            # rent_price = rent_price_locator.text_content()
+            # Get rent price and area
+            general_info_selector = 'h6.mb-0.text-normal'
+            general_info_locator = main_page.locator(general_info_selector).all()
             
+            # Get property area
+            property_area = general_info_locator[0].text_content()
             
+            # Get neighborhood
+            property_neighbor = general_info_locator[2].text_content()
+            
+            # Get city
+            property_city = general_info_locator[3].text_content()
+            
+            # Get number of bedrooms
+            property_number_bedrooms = general_info_locator[4].text_content()
+            
+            # Get the residents association fee
+            property_condominium_fee = general_info_locator[5].text_content()
+            
+            # Get the property description
+            property_published_date = general_info_locator[6].text_content()
+            
+            # Get the property rent price
+            property_rent_price = general_info_locator[7].text_content()
+            
+            # Get the IPTU fee
+            property_iptu_fee = general_info_locator[16].text_content()
 
+            # Get last update date
+            property_last_update_date = general_info_locator[17].text_content()
+            
+            # Get property description
+            property_description = main_page.locator('p.w-100.pb-3.mb-0.texto-descricao').text_content()
+            
             print('Hi')
